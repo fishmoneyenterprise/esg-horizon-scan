@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -10,11 +9,11 @@ import {
   MapPin, 
   Folder, 
   FileText, 
-  ChartBar, 
+  BarChart, 
   ShieldCheck, 
-  Heatmap, 
+  PieChart, 
   Workflow, 
-  Report, 
+  FileBarChart, 
   TrendingUp, 
   Clock
 } from "lucide-react";
@@ -149,7 +148,7 @@ const Index = () => {
               {/* Feature 4 */}
               <div className="flex flex-col items-start">
                 <div className="bg-esg-lightGreen rounded-full p-3 mb-4">
-                  <ChartBar className="text-esg-green h-5 w-5" />
+                  <BarChart className="text-esg-green h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Intuitive Dashboard</h3>
                 <p className="text-gray-600">
@@ -171,7 +170,7 @@ const Index = () => {
               {/* Feature 6 */}
               <div className="flex flex-col items-start">
                 <div className="bg-esg-lightGreen rounded-full p-3 mb-4">
-                  <Heatmap className="text-esg-green h-5 w-5" />
+                  <PieChart className="text-esg-green h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Heatmap Visualization</h3>
                 <p className="text-gray-600">
@@ -193,7 +192,7 @@ const Index = () => {
               {/* Feature 8 */}
               <div className="flex flex-col items-start">
                 <div className="bg-amber-100 rounded-full p-3 mb-4">
-                  <Report className="text-esg-amber h-5 w-5" />
+                  <FileBarChart className="text-esg-amber h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Comprehensive Reporting</h3>
                 <p className="text-gray-600">

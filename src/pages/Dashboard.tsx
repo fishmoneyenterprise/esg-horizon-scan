@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
@@ -6,18 +5,18 @@ import Footer from "@/components/Footer";
 import { 
   Bell, 
   Calendar, 
-  ChartBar, 
+  BarChart, 
   FileText, 
   Folder, 
   MapPin, 
   Shield, 
   TrendingUp, 
   TrendingDown,
-  Heatmap
+  PieChart
 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import {
-  BarChart,
+  BarChart as RechartsBarChart,
   Bar,
   XAxis,
   YAxis,
@@ -26,6 +25,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { Button } from "@/components/ui/button";
 
 const riskData = [
   { name: "Environmental", score: 75, color: "#2d6a4f" },
@@ -264,7 +264,7 @@ const Dashboard = () => {
               <CardContent>
                 <div className="h-80">
                   <ResponsiveContainer width="100%" height="100%">
-                    <BarChart
+                    <RechartsBarChart
                       data={regulatoryChangesData}
                       margin={{
                         top: 20,
@@ -281,7 +281,7 @@ const Dashboard = () => {
                       <Bar dataKey="Environmental" stackId="a" fill="#2d6a4f" />
                       <Bar dataKey="Social" stackId="a" fill="#f59e0b" />
                       <Bar dataKey="Governance" stackId="a" fill="#1a365d" />
-                    </BarChart>
+                    </RechartsBarChart>
                   </ResponsiveContainer>
                 </div>
               </CardContent>
@@ -345,8 +345,5 @@ const Dashboard = () => {
     </div>
   );
 };
-
-// Missing Button component
-import { Button } from "@/components/ui/button";
 
 export default Dashboard;
